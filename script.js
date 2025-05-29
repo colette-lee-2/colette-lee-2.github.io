@@ -12,22 +12,22 @@
         });
 
         // Form submission
-        const form = document.querySelector('form');
-        if (form) {
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const message = document.getElementById('message').value;
+        // const form = document.querySelector('form');
+        // if (form) {
+        //     form.addEventListener('submit', function(e) {
+        //         e.preventDefault();
+        //         const name = document.getElementById('name').value;
+        //         const email = document.getElementById('email').value;
+        //         const message = document.getElementById('message').value;
                 
-                // Here you would typically send the form data to a server
-                console.log('Form submitted:', { name, email, message });
+        //         // Here you would typically send the form data to a server
+        //         console.log('Form submitted:', { name, email, message });
                 
-                // Show success message
-                alert('Thank you for your message! I will get back to you soon.');
-                form.reset();
-            });
-        }
+        //         // Show success message
+        //         alert('Thank you for your message! I will get back to you soon.');
+        //         form.reset();
+        //     });
+        // }
 
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
