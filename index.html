@@ -73,7 +73,7 @@
             <div class="md:flex md:items-center md:justify-between md:gap-x-10"">
                 <div class="pt-500" >
                     <h1 class="drop-shadow-lg text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
-                        Modernize & <span class="text-accent">streamline</span> your business
+                        Modernize & <span class="text-accent">Streamline</span> Your Business
                     </h1>
                     <p class="text-lg text-gray-100 mb-8">
                         Transforming your digital presence with custom websites and smart systems that work as hard as you do.
@@ -224,27 +224,46 @@
                     </div>
                 </div>
                 <div class="md:w-1/2">
-                    <form id="form" action="https://api.web3forms.com/submit" method="POST" class="bg-gray-900  p-8 rounded-xl shadow-md">
-
+                    <form id="form" action="https://api.web3forms.com/submit" method="POST" class="bg-gray-900 p-8 rounded-xl shadow-md">
                         <input type="hidden" name="access_key" value="74ec84ab-14d2-41ef-97dd-7ae3338b7d7a">
+                    
                         <div class="mb-6">
                             <label for="name" class="block text-gray-300 font-medium mb-2">Name</label>
                             <input type="text" id="name" name="name" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all" required>
                         </div>
+                    
                         <div class="mb-6">
                             <label for="email" class="block text-gray-300 font-medium mb-2">Email</label>
                             <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all" required>
                         </div>
+                    
                         <div class="mb-6">
                             <label for="message" class="block text-gray-300 font-medium mb-2">Message</label>
                             <textarea name="message" id="message" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all" required></textarea>
                         </div>
+                    
+                        <!-- Checkboxes for Opt-In -->
+                        <div class="mb-6 text-gray-300">
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" name="informational_optin" class="form-checkbox text-indigo-600 bg-gray-800 border-gray-600 rounded">
+                                <span class="ml-2">I agree to receive informational messages</span>
+                            </label>
+                        </div>
+                    
+                        <div class="mb-6 text-gray-300">
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" name="marketing_optin" class="form-checkbox text-indigo-600 bg-gray-800 border-gray-600 rounded">
+                                <span class="ml-2">I agree to receive marketing texts</span>
+                            </label>
+                        </div>
+                    
                         <!-- Honeypot Spam Protection -->
                         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                         <input type="hidden" name="redirect" value="https://web3forms.com/success">
-                        <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition-all">Send Message</button>
                     
+                        <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition-all">Send Message</button>
                     </form>
+                    
             
                     
                 </div>
