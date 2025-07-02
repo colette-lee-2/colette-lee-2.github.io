@@ -11,6 +11,11 @@
             });
         });
 
+        document.getElementById('services-nav').addEventListener('click', function() {
+            window.location.href = '#services';
+        });
+
+
         // Form submission
         // const form = document.querySelector('form');
         // if (form) {

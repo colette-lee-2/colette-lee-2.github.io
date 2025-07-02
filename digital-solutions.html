@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Solutions | Colette Lee Digital Consulting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        accent: '#cf92fc',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(45deg, #cf92fc, #a855f7);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+
+    <!-- Navigation -->
+    <nav class="bg-gray-900/80 backdrop-blur-sm shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-10 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-white">Colette Lee</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#home" class="text-gray-300 hover:text-indigo-600 px-3 py-2 text-sm font-medium transition-all">Home</a>
+                    <a href="index.html#about" class="text-gray-300 hover:text-indigo-600 px-3 py-2 text-sm font-medium transition-all">About</a>
+                    <div class="relative group">
+                        <button id="services-nav" class="text-gray-300 hover:text-indigo-600 px-3 py-2 text-sm font-medium transition-all flex items-center">
+                            Services 
+                        </button>
+                        <div class="absolute hidden group-hover:block bg-gray-800 min-w-[200px] rounded-md shadow-lg z-50">
+                            <div class="py-1">
+                                <a href="business-apps.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-indigo-400">Business Applications</a>
+                                <a href="websites.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-indigo-400">Web Design</a>
+                                <a href="digital-solutions.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-indigo-400">Digital Solutions</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="index.html#contact" class="text-gray-300 hover:text-indigo-600 px-3 py-2 text-sm font-medium transition-all">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#home" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-accent hover:bg-gray-700">Home</a>
+                <a href="index.html#about" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-accent hover:bg-gray-700">About</a>
+                <div class="pl-4">
+                    <a href="index.html#services" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-accent">Services</a>
+                    <div class="pl-4 space-y-1">
+                        <a href="business-apps.html" class="block px-3 py-2 text-sm text-gray-400 hover:text-accent hover:bg-gray-700">Business Applications</a>
+                        <a href="websites.html" class="block px-3 py-2 text-sm text-gray-400 hover:text-accent hover:bg-gray-700">Web Design</a>
+                        <a href="digital-solutions.html" class="block px-3 py-2 text-sm text-gray-400 hover:text-accent hover:bg-gray-700">Digital Solutions</a>
+                    </div>
+                </div>
+                <a href="index.html#contact" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-accent hover:bg-gray-700">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gray-800 py-20 px-4 sm:px-6 lg:px-8 bg-cover bg-center bg-no-repeat" style="background-image: url('images/abstract-triangles-background.jpg');">
+        <div class="absolute inset-0 bg-gray-900 bg-opacity-60"></div> <!-- Overlay -->
+        <div class="relative max-w-7xl mx-auto pt-12 z-10">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-5xl font-bold mb-6 leading-tight">
+                        <span class="gradient-text">Digital Solutions</span><br>
+                        Transform Your Business
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-lg">
+                        Comprehensive digital tools to streamline operations and drive decision-making.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#solutions" class="bg-indigo-600 hover:bg-indigo-800 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 text-center">
+                            Explore Solutions
+                        </a>
+                        <a href="index.html#contact" class="border border-accent text-accent hover:bg-accent hover:text-gray-900 font-semibold py-3 px-6 rounded-lg transition duration-300 text-center">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <div class="absolute -top-6 -left-6 w-32 h-32 rounded-full bg-accent opacity-20 blur-xl"></div>
+                        <div class="absolute -bottom-6 -right-6 w-32 h-32 rounded-full bg-indigo-600 opacity-20 blur-xl"></div>
+                        <div class="relative bg-gray-700 rounded-2xl overflow-hidden border border-gray-600 shadow-xl hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
+                            <div class="p-4">
+                                <div class="flex justify-between items-center mb-4">
+                                    <h3 class="text-sm font-semibold text-gray-300">Sales Dashboard</h3>
+                                    <div class="flex space-x-2">
+                                        <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                                        <div class="w-2 h-2 rounded-full bg-yellow-500"></div>
+                                        <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-3 gap-2 mb-4">
+                                    <div class="bg-gray-800 p-2 rounded">
+                                        <p class="text-xs text-gray-400">Revenue</p>
+                                        <p class="text-sm font-bold text-accent">$24.5K</p>
+                                    </div>
+                                    <div class="bg-gray-800 p-2 rounded">
+                                        <p class="text-xs text-gray-400">Growth</p>
+                                        <p class="text-sm font-bold text-green-500">+12%</p>
+                                    </div>
+                                    <div class="bg-gray-800 p-2 rounded">
+                                        <p class="text-xs text-gray-400">Target</p>
+                                        <p class="text-sm font-bold text-yellow-500">85%</p>
+                                    </div>
+                                </div>
+                                <div class="h-32 bg-gray-800 rounded mb-2 relative overflow-hidden">
+                                    <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-accent/30 to-transparent"></div>
+                                    <div class="absolute bottom-0 left-0 right-0 flex h-full items-end space-x-1 px-2">
+                                        <div class="w-1/5 h-1/2 bg-accent rounded-t"></div>
+                                        <div class="w-1/5 h-3/4 bg-accent rounded-t"></div>
+                                        <div class="w-1/5 h-full bg-accent rounded-t"></div>
+                                        <div class="w-1/5 h-2/3 bg-accent rounded-t"></div>
+                                        <div class="w-1/5 h-1/3 bg-accent rounded-t"></div>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between text-xs text-gray-500">
+                                    <span>Mon</span>
+                                    <span>Tue</span>
+                                    <span>Wed</span>
+                                    <span>Thu</span>
+                                    <span>Fri</span>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-accent font-semibold">SERVICE HIGHLIGHTS</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">Powerful Digital Tools</h2>
+                <p class="max-w-2xl mx-auto text-gray-400">
+                    Tailored solutions designed to meet your unique operational needs. Here’s some examples of what I can set up for your business to enhance efficiency and drive growth.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-gray-800 rounded-xl p-8 border border-gray-700 hover:border-accent transition-all duration-300">
+                    <div class="text-accent text-3xl mb-4">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Project Management Tools</h3>
+                    <p class="text-gray-400">Implement robust project management solutions like Trello or Asana to enhance team collaboration, streamline task management, and ensure project timelines are met efficiently.</p>
+                </div>
+                <div class="service-card bg-gray-800 rounded-xl p-8 border border-gray-700 hover:border-accent transition-all duration-300">
+                    <div class="text-accent text-3xl mb-4">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">BI Dashboards</h3>
+                    <p class="text-gray-400">Transform your raw data into actionable insights with dynamic business intelligence dashboards, providing real-time analytics to drive strategic decision-making.</p>
+                </div>
+                <div class="service-card bg-gray-800 rounded-xl p-8 border border-gray-700 hover:border-accent transition-all duration-300">
+                    <div class="text-accent text-3xl mb-4">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">E-commerce Integration</h3>
+                    <p class="text-gray-400">Seamlessly integrate e-commerce solutions to expand your market reach, manage online sales, and provide customers with a smooth shopping experience.</p>
+                </div>
+                <div class="service-card bg-gray-800 rounded-xl p-8 border border-gray-700 hover:border-accent transition-all duration-300">
+                    <div class="text-accent text-3xl mb-4">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Email Marketing Automation</h3>
+                    <p class="text-gray-400">Automate your email campaigns with personalized content to engage your audience, nurture leads, and increase customer retention while saving time and resources.</p>
+                </div>
+                <div class="service-card bg-gray-800 rounded-xl p-8 border border-gray-700 hover:border-accent transition-all duration-300">
+                    <div class="text-accent text-3xl mb-4">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Cloud Storage Solutions</h3>
+                    <p class="text-gray-400">Securely store and access your important business files from any location with our cloud storage solutions, ensuring flexibility and data protection.</p>
+                </div>
+                <div class="service-card bg-gray-800 rounded-xl p-8 border border-gray-700 hover:border-accent transition-all duration-300">
+                    <div class="text-accent text-3xl mb-4">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Digital Forms</h3>
+                    <p class="text-gray-400">Simplify data collection processes and enhance efficiency by implementing custom digital forms tailored to your business needs, making workflows smoother and more effective.</p>
+                </div>
+            </div>
+            <div class="text-center mt-12 text-gray-400">
+                <p>If you have specific digital needs not covered here, reach out to discuss custom solutions tailored to your business.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <span class="text-accent font-semibold">BENEFITS</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-8">Why Choose Our Digital Solutions</h2>
+                    <p class="text-lg text-gray-300 mb-6">
+                        Our digital solutions are designed to transform the way you do business, offering significant advantages that drive success. Here's why our clients choose us:
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <div class="text-accent mr-4 mt-1">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">Enhanced Efficiency</h3>
+                                <p class="text-gray-400">Streamline your operations with tailored tools that automate repetitive tasks and optimize workflows, allowing your team to focus on what truly matters.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="text-accent mr-4 mt-1">
+                                <i class="fas fa-chart-pie"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">Better Decision-Making</h3>
+                                <p class="text-gray-400">Gain insights with real-time analytics and comprehensive data visualization, empowering you to make informed decisions quickly and confidently.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="text-accent mr-4 mt-1">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">Time Savings</h3>
+                                <p class="text-gray-400">Save valuable time with intuitive solutions that simplify complex processes, reducing manual workload and accelerating project timelines.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <p class="text-gray-300">
+                        By integrating our solutions, you'll not only experience these benefits but also position your business for sustained growth and success. Let us help you harness the power of digital to achieve your goals.
+                    </p>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="relative rounded-xl overflow-hidden  shadow-lg">
+                        <img src="https://i.postimg.cc/XJ6KXNRf/people-working-laptop-meeting.jpg" alt="Team analyzing digital dashboard" class="w-full h-auto">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-gray-950 py-20 px-4">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Optimize Your Operations?</h2>
+            <p class="text-xl text-gray-300 mb-8">
+                Get in touch to discuss how our digital solutions can benefit your business.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="index.html" class="border border-gray-500 hover:border-accent text-gray-300 hover:text-white font-bold py-4 px-10 rounded-lg transition duration-300 flex items-center justify-center">
+                    <i class="fas fa-arrow-left mr-2"></i> Back to Home
+                </a>
+                <a href="index.html#contact" class="bg-indigo-600 hover:bg-indigo-800 text-white font-bold py-4 px-10 rounded-lg transition duration-300 items-center justify-center">
+                    Get Started Today <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (reuse current if applicable) -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="mb-8 md:mb-0">
+                    <span class="text-xl font-bold">Colette Lee</span>
+                    <p class="text-gray-400 mt-2">Digital systems consultant</p>
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:grid-cols-3">
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-wider">Navigation</h3>
+                        <ul class="mt-4 space-y-2">
+                            <li><a href="#home" class="text-gray-400 hover:text-white transition-all">Home</a></li>
+                            <li><a href="#about" class="text-gray-400 hover:text-white transition-all">About</a></li>
+                            <li><a href="#services" class="text-gray-400 hover:text-white transition-all">Services</a></li>
+                            <li><a href="#contact" class="text-gray-400 hover:text-white transition-all">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-wider">Services</h3>
+                        <ul class="mt-4 space-y-2">
+                            <li><a href="business-apps.html" class="text-gray-400 hover:text-white transition-all">Business Applications</a></li>
+                            <li><a href="websites.html" class="text-gray-400 hover:text-white transition-all">Website Design</a></li>
+                            <li><a href="digital-solutions.html" class="text-gray-400 hover:text-white transition-all">Digital Solutions</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-wider">Connect</h3>
+                        <div class="mt-4 flex space-x-6">
+                            <a href="https://www.linkedin.com/in/colette-lee/" class="text-gray-400 hover:text-white transition-all">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div>
+                    <p class="text-gray-400 text-sm">© 2025 Colette Lee. All rights reserved.</p>
+                    <a class="text-gray-400 text-xs" href="https://www.vecteezy.com/free-photos/server">Server Stock photos by Vecteezy</a>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <a href="privacy-policy.html" class="text-gray-400 hover:text-white text-sm mr-6 transition-all">Privacy Policy</a>
+                    <a href="terms-of-service.html" class="text-gray-400 hover:text-white text-sm transition-all">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        document.getElementById('services-nav').addEventListener('click', function() {
+            // In a real implementation, you would toggle a mobile menu here
+            window.location.href = 'index.html#services';
+        });
+
+    </script>
+</body>
+</html>
