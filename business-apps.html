@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Applications | Custom Solutions for Your Business</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        accent: {
+                            DEFAULT: '#cf92fc',
+                            //DEFAULT: '#4f39f6',
+                            50: '#F5F0FF',
+                            100: '#E9D8FF',
+                            200: '#D6BCFA',
+                            300: '#C084FC',
+                            400: '#A855F7',
+                            500: '#9333EA',
+                            600: '#7E22CE',
+                            700: '#6B21A8',
+                            800: '#581C87',
+                            900: '#3B0764',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(90deg, #A855F7, #E9D8FF);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .transition-smooth {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .timeline-item {
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-item:hover .timeline-dot {
+            background-color: #A855F7;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="bg-gray-900/80 backdrop-blur-sm shadow-md fixed w-full z-50">
+        
+        <div class="max-w-7xl mx-auto px-10 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-white ">Colette Lee</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#home" class="text-gray-300 hover:text-indigo-600 px-3 py-2 text-sm font-medium transition-all">Home</a>
+                    <a href="index.html#about" class="text-gray-300 hover:text-indigo-600 px-3 py-2 text-sm font-medium transition-all">About</a>
+                    <div class="relative group">
+                        <button class="text-gray-300 hover:text-indigo-600 px-3 py-2 text-sm font-medium transition-all flex items-center">
+                            Services 
+                        </button>
+                        <div class="absolute hidden group-hover:block bg-gray-800 min-w-[200px] rounded-md shadow-lg z-50">
+                            <div class="py-1">
+                                <a href="business-apps.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-indigo-400">Business Applications</a>
+                                <a href="websites.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-indigo-400">Web Design</a>
+                                <a href="#digital-solutions" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-indigo-400">Digital Solutions</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="index.html#contact" class="text-gray-300 hover:text-indigo-600 px-3 py-2 text-sm font-medium transition-all">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-accent hover:bg-gray-700">Home</a>
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-accent hover:bg-gray-700">About</a>
+                <div class="pl-4">
+                    <a href="#services" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-accent">Services</a>
+                    <div class="pl-4 space-y-1">
+                        <a href="#business-apps" class="block px-3 py-2 text-sm text-gray-400 hover:text-accent hover:bg-gray-700">Business Applications</a>
+                        <a href="#web-design" class="block px-3 py-2 text-sm text-gray-400 hover:text-accent hover:bg-gray-700">Web Design</a>
+                        <a href="#digital-solutions" class="block px-3 py-2 text-sm text-gray-400 hover:text-accent hover:bg-gray-700">Digital Solutions</a>
+                    </div>
+                </div>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-accent hover:bg-gray-700">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner Section -->
+    <section class="relative bg-gray-800 py-16 md:py-20 px-4 overflow-hidden">
+        <!-- Photo background with dark overlay -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-indigo-950 opacity-90"></div>
+            <img src="images/macbook.jpg" 
+                 alt="Office workspace background" 
+                 class="w-full h-full object-cover">
+        </div>
+        <div class="container mx-auto max-w-6xl relative z-10 mt-10">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="text-left mb-8 md:mb-0">
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4">
+                        <span class="text-accent">Custom</span> Business Applications
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-300 max-w-2xl">
+                        Tailored systems that centralize your operations and automate your workflows
+                    </p>
+                </div>
+                <div>
+                    <a href="#" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-lg transition-smooth inline-flex items-center">
+                        Let's build your system <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+  <!-- Features Section (Fixed Carousel) -->
+<section class="bg-gray-900 py-20 px-4">
+  <div class="container mx-auto max-w-6xl">
+    <!-- Heading -->
+    <div class="text-center mb-16">
+        <span class="text-accent font-semibold">WHAT I BUILD</span>
+        <h2 class="text-3xl md:text-4xl font-bold  mt-4 mb-4">Custom Systems</h2>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+        Each system is custom-designed using tools like Airtable (and others, based on your needs). Think of it as your all-in-one command center—built specifically for how you work.
+      </p>
+    </div>
+
+    <!-- Feature Cards -->
+    <div class="bg-gray-800 rounded-xl p-8  relative overflow-hidden">
+      <!-- Feature 1: Custom Database Design -->
+      <div id="database-content" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <div class="w-14 h-14 bg-accent-900 rounded-lg flex items-center justify-center mb-6">
+            <i class="fas fa-database text-2xl text-accent"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Custom Database Design</h3>
+            <p class="text-gray-300 text-lg">I’ll build a structured, easy-to-use system to centralize your business data—so everything you need is in one place. Here are a few examples of what your custom database can manage:
+            </p>
+
+          <ul class="text-gray-300 space-y-2 text-lg mt-6">
+            <li>• Organize client details, service history, and notes</li>
+            <li>• Track jobs, appointments, and progress</li>
+            <li>• Store intake forms, contracts, and more</li>
+          </ul>
+        </div>
+        <div class="flex items-center justify-center">
+          <img src="https://i.postimg.cc/RhqDR46h/tables-2.png" alt="Database tables example" class="w-full h-auto rounded-lg shadow-lg">
+        </div>
+      </div>
+
+      <!-- Feature 2: Workflow Automation -->
+      <div id="workflow-content" class="hidden grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <div class=" w-14 h-14 bg-accent-900 rounded-lg flex items-center justify-center mb-6">
+            <i class="fas fa-cogs text-2xl text-accent"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Workflow Automation</h3>
+          <p class="text-gray-300 text-lg">I’ll set up smart, behind-the-scenes workflows that save you time and minimize manual work. The examples below show just a few ways automation can streamline your daily operations:
+            </p>
+
+          <ul class="text-gray-300 space-y-2 text-lg mt-6">
+            <li>• New client fills out a form → auto-added to your CRM</li>
+            <li>• Appointment booked → calendar event + reminder</li>
+            <li>• Project completed → invoice auto-generated</li>
+          </ul>
+          <p class="hidden">
+            I’ll design and set up automated workflows that handle repetitive tasks for you—so you can focus on running your business, not managing logistics. For example, I can configure your system to automatically capture new client details from intake forms and store them in your CRM. I can also link your booking tool to your calendar, so that when an appointment is scheduled, it triggers an event creation and sends out confirmations or reminders. And when a project is marked complete, I can build in a workflow that auto-generates an invoice and either sends it out or flags it for your review.
+            </p>
+        </div>
+        <div class="flex items-center justify-center">
+          <img src="https://i.postimg.cc/SQ20CfWr/automation.png" alt="Workflow automation example" class="w-full h-auto rounded-lg shadow-lg">
+        </div>
+      </div>
+
+      <!-- Feature 3: Tool Integrations -->
+      <div id="tools-content" class="hidden grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <div class="w-14 h-14 bg-accent-900 rounded-lg flex items-center justify-center mb-6">
+            <i class="fas fa-plug text-2xl text-accent"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Tool Integrations</h3>
+           <p class="text-gray-300 text-lg">I can connect the tools you already use so they work better together—with less effort on your part. The examples below show just a few ways I can streamline your tech stack:
+            </p>
+          <ul class="text-gray-300 space-y-2 text-lg mt-6">
+            <li>• Connect tools like Calendly, QuickBooks, Gmail, Slack</li>
+            <li>• Automate across platforms with Zapier or Make</li>
+            <li>• Build bridges between website, CRM, and more</li>
+          </ul>
+        </div>
+        <div class="flex items-center justify-center">
+          <img src="https://i.postimg.cc/8kq2Hf4V/integrations.png" alt="Tool integrations example" class="w-full h-auto rounded-lg shadow-lg">
+        </div>
+      </div>
+
+    
+
+      <!-- Navigation Arrows -->
+      <div class="flex justify-center mt-8 space-x-4">
+        <button onclick="prevFeature()" class="w-12 h-12 rounded-full bg-gray-700 hover:bg-accent transition-smooth flex items-center justify-center">
+          <i class="fas fa-chevron-left text-xl"></i>
+        </button>
+        <button onclick="nextFeature()" class="w-12 h-12 rounded-full bg-gray-700 hover:bg-accent transition-smooth flex items-center justify-center">
+          <i class="fas fa-chevron-right text-xl"></i>
+        </button>
+      </div>
+      
+
+
+    </div>
+
+    <!-- Feature Indicators -->
+      <div class="flex justify-center mt-10 grid grid-cols-1 md:grid-cols-3 mt-20">
+        <button onclick="showFeature(0)" class="border-r border-gray-400 feature-indicator text-lg font-medium transition-smooth text-accent">
+          Custom Database Design
+        </button>
+        <button onclick="showFeature(1)" class="border-r border-gray-400 feature-indicator text-lg font-medium transition-smooth text-gray-400">
+          Workflow Automation
+        </button>
+        <button onclick="showFeature(2)" class="feature-indicator text-lg font-medium transition-smooth text-gray-400">
+          Tool Integrations
+        </button>
+      </div>
+  </div>
+</section>
+
+
+    <!-- Built Around Your Business Section -->
+    <section class="bg-gray-800 py-20 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Built Around Your Business</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Whether you're a dog trainer, event planner, contractor, or creative professional, I take time to understand your business before designing anything. That way, your system:
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-700 rounded-xl p-8 card-hover transition-smooth">
+                    <div class="text-3xl text-accent mb-4">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Matches how you think and work</h3>
+                    <p class="text-gray-300">Your system is designed around your natural workflow, not forcing you to adapt to rigid software.</p>
+                </div>
+                <div class="bg-gray-700 rounded-xl p-8 card-hover transition-smooth">
+                    <div class="text-3xl text-accent mb-4">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Supports your daily operations</h3>
+                    <p class="text-gray-300">Every feature serves a purpose in making your day-to-day work smoother and more efficient.</p>
+                </div>
+                <div class="bg-gray-700 rounded-xl p-8 card-hover transition-smooth">
+                    <div class="text-3xl text-accent mb-4">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Scales as you grow</h3>
+                    <p class="text-gray-300">Your system evolves with your business, adapting to new needs without requiring a complete rebuild.</p>
+                </div>
+            </div>
+            <p class="text-center text-gray-300 mt-12 max-w-3xl mx-auto">
+                Every project includes a discovery process to map out your workflows, bottlenecks, and opportunities—before we build.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24">
+                <!-- left Column -->
+                <div class="pl-12">
+
+                <div class="bg-gray-800 rounded-xl p-8 ">
+                    <h3 class="text-xl md:text-2xl font-bold mb-6">Great For:</h3>
+                    <ul class="text-gray-300 space-y-4 text-lg">
+                        <li class="flex items-start">
+                            <i class="fas fa-user text-accent mr-3 mt-1"></i>
+                            <span>Service providers managing clients and appointments</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-user text-accent mr-3 mt-1"></i>
+                            <span>Teams juggling spreadsheets, forms, and emails</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-user text-accent mr-3 mt-1"></i>
+                            <span>Founders ready to scale without more admin work</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-user text-accent mr-3 mt-1"></i>
+                            <span>Anyone tired of duct-taping tools together</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- right Column -->
+            <div>
+                <div class="rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 ">
+                    <img src="images/medium-shot-smiley-women-with-devices.jpg" 
+                         alt="Business growth with website" 
+                         class="w-full h-full object-cover">
+                </div>
+
+            </div>
+
+
+
+        </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- What to Expect (Timeline Version) -->
+    <section class="bg-gray-900 py-20 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Left Column -->
+                <div>
+                    <span class="text-accent font-semibold">MY PROCESS</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">What to Expect</h2>
+                    <p class="text-xl text-gray-300">
+                        A clear, step-by-step process from initial consultation to final delivery. Each phase is designed to ensure your system perfectly matches your business needs.
+                    </p>
+                    <div class="opacity-50">
+                        <svg width="100%" height="300" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0,60 Q100,120 200,60 T400,60" stroke="#A855F7" stroke-width="2" fill="none" />
+                            <path d="M0,80 Q100,0 200,80 T400,80" stroke="#E9D8FF" stroke-width="2" fill="none" />
+                            <circle cx="50" cy="60" r="8" fill="#A855F7" opacity="0.5" />
+                            <circle cx="200" cy="60" r="8" fill="#E9D8FF" opacity="0.5" />
+                            <circle cx="350" cy="60" r="8" fill="#A855F7" opacity="0.5" />
+                        </svg>
+                    </div>
+
+                </div>
+                
+                <!-- Right Column (Timeline) -->
+                <div class="relative">
+                    <!-- Vertical Line -->
+                    <div class="absolute left-3 top-0 h-full w-0.5 bg-indigo-500"></div>
+
+                    
+                    <!-- Timeline Items -->
+                    <div class="space-y-10 pl-12">
+                        <!-- Item 1 -->
+                        <div class="relative timeline-item group">
+                            <div class="absolute -left-12 top-1/2 transform -translate-y-1/2 w-6 h-6 rounded-full bg-gray-700 border-4 border-indigo-500 group-hover:bg-indigo-300 transition-smooth"></div>
+                            <div class="bg-gray-800 rounded-xl p-6 group-hover:bg-gray-700 transition-smooth">
+                                <h2 class="text-2xl  mb-2">01 </h2>
+                                <h3 class="text-xl font-bold mb-2">Discovery & Planning</h3>
+                                <p class="text-gray-300">
+                                    We'll meet to discuss your goals, pain points, and current tools. I'll then propose a system tailored to your workflow.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 2 -->
+                        <div class="relative timeline-item group">
+                            <div class="absolute -left-12 top-1/2 transform -translate-y-1/2 w-6 h-6 rounded-full bg-gray-700 border-4 border-indigo-500 group-hover:bg-indigo-300 transition-smooth"></div>
+                            <div class="bg-gray-800 rounded-xl p-6 group-hover:bg-gray-700 transition-smooth">
+                                <h2 class="text-2xl  mb-2">02</h2>
+                                <h3 class="text-xl font-bold mb-2">Build & Automate</h3>
+                                <p class="text-gray-300">
+                                    I design your custom application, set up automations, and connect any outside tools.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 3 -->
+                        <div class="relative timeline-item group">
+                            <div class="absolute -left-12 top-1/2 transform -translate-y-1/2 w-6 h-6 rounded-full bg-gray-700 border-4 border-indigo-500 group-hover:bg-indigo-300 transition-smooth"></div>
+                            <div class="bg-gray-800 rounded-xl p-6 group-hover:bg-gray-700 transition-smooth">
+                                <h2 class="text-2xl  mb-2">03</h2>
+                                <h3 class="text-xl font-bold mb-2">Test & Train</h3>
+                                <p class="text-gray-300">
+                                    You get guided walk-throughs, video tutorials, and time to test the system before launch.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 4 -->
+                        <div class="relative timeline-item group">
+                            <div class="absolute -left-12 top-1/2 transform -translate-y-1/2 w-6 h-6 rounded-full bg-gray-700 border-4 border-indigo-500 group-hover:bg-indigo-300 transition-smooth"></div>
+                            <div class="bg-gray-800 rounded-xl p-6 group-hover:bg-gray-700 transition-smooth">
+                                <h2 class="text-2xl  mb-2">04</h2>
+                                <h3 class="text-xl font-bold mb-2">Launch & Support</h3>
+                                <p class="text-gray-300">
+                                    We go live. I'm here for ongoing support, updates, and future enhancements if you need them.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+
+
+    <!-- CTA Section -->
+    <section class="bg-gray-800 py-20 px-4">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business Operations?</h2>
+            <p class="text-xl text-gray-300 mb-8">
+                Schedule a free consultation to discuss your specific needs and how I can help.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="index.html" class="border border-gray-500 hover:border-accent text-gray-300 hover:text-white font-bold py-4 px-10 rounded-lg transition-smooth flex items-center justify-center">
+                    <i class="fas fa-arrow-left mr-2"></i> Back to Home
+                </a>
+                <a href="index.html#contact" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-lg transition-smooth flex items-center justify-center">
+                    Get Started Today <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="mb-8 md:mb-0">
+                    <span class="text-xl font-bold">Colette Lee</span>
+                    <p class="text-gray-400 mt-2">Digital systems consultant</p>
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:grid-cols-3">
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-wider">Navigation</h3>
+                        <ul class="mt-4 space-y-2">
+                            <li><a href="#home" class="text-gray-400 hover:text-white transition-all">Home</a></li>
+                            <li><a href="#about" class="text-gray-400 hover:text-white transition-all">About</a></li>
+                            <li><a href="#services" class="text-gray-400 hover:text-white transition-all">Services</a></li>
+                            <li><a href="#contact" class="text-gray-400 hover:text-white transition-all">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-wider">Services</h3>
+                        <ul class="mt-4 space-y-2">
+                            <li><a href="#services" class="text-gray-400 hover:text-white transition-all">Airtable Setup</a></li>
+                            <li><a href="#services" class="text-gray-400 hover:text-white transition-all">Website Design</a></li>
+                            <li><a href="#services" class="text-gray-400 hover:text-white transition-all">Digital Forms</a></li>
+                            <li><a href="#services" class="text-gray-400 hover:text-white transition-all">BI Dashboards</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-wider">Connect</h3>
+                        <div class="mt-4 flex space-x-6">
+                            <a href="https://www.linkedin.com/in/colette-lee/" class="text-gray-400 hover:text-white transition-all">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <!--
+                            <a href="#" class="text-gray-400 hover:text-white transition-all">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white transition-all">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                        -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div>
+                    <p class="text-gray-400 text-sm">© 2025 Colette Lee. All rights reserved.</p>
+                    <a class="text-gray-400 text-xs" href="https://www.vecteezy.com/free-photos/server">Server Stock photos by Vecteezy</a>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <a href="privacy-policy.html" class="text-gray-400 hover:text-white text-sm mr-6 transition-all">Privacy Policy</a>
+                    <a href="terms-of-service.html" class="text-gray-400 hover:text-white text-sm transition-all">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple mobile menu toggle functionality
+        document.querySelector('button').addEventListener('click', function() {
+            // In a real implementation, you would toggle a mobile menu here
+            window.location.href = 'index.html#services';
+        });
+
+        // Feature carousel functionality
+        let currentFeature = 0;
+        const features = ['database', 'workflow', 'tools'];
+        
+        function showFeature(index) {
+            currentFeature = index;
+            // Hide all features
+            document.getElementById('database-content').classList.add('hidden');
+            document.getElementById('workflow-content').classList.add('hidden');
+            document.getElementById('tools-content').classList.add('hidden');
+            
+            // Show current feature
+            document.getElementById(`${features[index]}-content`).classList.remove('hidden');
+            
+            // Update active indicators
+            const indicators = document.querySelectorAll('.feature-indicator');
+            indicators.forEach((indicator, i) => {
+                indicator.classList.toggle('text-accent', i === index);
+                indicator.classList.toggle('text-gray-400', i !== index);
+            });
+        }
+        
+        function nextFeature() {
+            currentFeature = (currentFeature + 1) % features.length;
+            showFeature(currentFeature);
+        }
+        
+        function prevFeature() {
+            currentFeature = (currentFeature - 1 + features.length) % features.length;
+            showFeature(currentFeature);
+        }
+        
+        // Initialize with first feature visible
+        // document.addEventListener('DOMContentLoaded', () => {
+        //     document.getElementById('database-content').classList.remove('hidden');
+        // });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showFeature(currentFeature); // ensures correct one is visible on page load
+        });
+
+    </script>
+</body>
+</html>
